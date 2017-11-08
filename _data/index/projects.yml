@@ -7,3 +7,10 @@
   repo: Jalpc
   img: /static/assets/img/landing/jekyll.png
   desc: This project is my project. I use javescript to get repo's information all my repos have only one request.
+
+- name: Crash
+  i18n: Crash
+  gh_user: kvtoraman
+  repo: crash_project
+  img: /static/assets/img/landing/crash.png
+  desc: Crowdsourced application for gathering trash locations in given areas built during "Jeju Global Hackathon" (Oct. 27- Oct. 29)

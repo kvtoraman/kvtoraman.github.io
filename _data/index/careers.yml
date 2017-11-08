@@ -10,6 +10,20 @@
     detail: Summer 2017
     i18n: company_a_date
   job:
-    detail: CTO
+    detail: Intern
     i18n: company_a_job
   icon: fa-plus-square
+
+- name:
+    detail: KAIST
+    i18n: company_a
+  desc:
+    detail: Undergraduate
+    i18n: company_a_desc
+  date:
+    detail: Sept. 2015 - Aug. 2019
+    i18n: company_a_date
+  job:
+    detail: Student
+    i18n: company_a_job
+  icon: fa-university
