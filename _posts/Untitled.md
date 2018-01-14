@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "First Post"
+date:   2018-01-14
+desc: "My first blog post"
+keywords: "US,exchange
+categories: [BLOG]
+tags: [Jalpc,Jekyll,tag]
+icon: icon-html
+---
+
+Today I want to start writing my blog. Damn it took long time. But, here I am started writing. Being in a new place encourages me to write this blog. With my experience, I wanna help future incoming exchange students to US. 
+
+
