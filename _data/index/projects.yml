@@ -1,12 +1,12 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-- name: Jalpc
-  i18n: jalpc
-  gh_user: jarrekk
-  repo: Jalpc
-  img: /static/assets/img/landing/jekyll.png
-  desc: This project is my project. I use javescript to get repo's information all my repos have only one request.
+- name: Moody
+  i18n: Moody
+  gh_user: kvtoraman
+  repo: arite_project
+  img: /static/assets/img/landing/moody.png
+  desc: We introduce Moody, where users can log and become aware of their current mental status and empathize with others to build an understanding community. 
 
 - name: Crash
   i18n: Crash
