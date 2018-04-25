@@ -1,0 +1,101 @@
+index,id,name,host_id,host_name,neighbourhood_group,neighbourhood,latitude,longitude,room_type,price,minimum_nights,number_of_reviews,last_review,reviews_per_month,calculated_host_listings_count,availability_365,Safety
+37120,20033323,The Manhattan Duplex Oasis,94877519,Joseph,Manhattan,Harlem,40.82804744,-73.95201735,Entire home/apt,50,3,14,1/1/2018,2.05,4,321,5
+37752,20277286,Cosy and very central room in Chinatown/Nolita!,3742692,Elif,Manhattan,Chinatown,40.71706466,-73.99426628,Private room,50,3,1,2/6/2018,1,1,2,5
+37883,20326257,Studio in the Heart of the East Village,10947591,Laura,Manhattan,East Village,40.72649937,-73.99058667,Entire home/apt,50,4,4,12/31/2017,0.7,1,28,5
+38154,20455626,Brand New and High Tech Apartment in LES,17426175,Eric,Manhattan,Lower East Side,40.71769246,-73.98559547,Entire home/apt,50,4,1,12/25/2017,0.43,2,0,5
+38451,20570245,Luxury Fifth Ave. 2Bdrm Apartment,9037281,Frankie,Manhattan,Midtown,40.74724174,-73.98745714,Entire home/apt,50,3,16,2/24/2018,2.7,1,251,5
+38827,20688624,Luxury Alcove Studio in Chelsea,979144,Ryan,Manhattan,Chelsea,40.74418742,-73.99912502,Entire home/apt,50,1,20,2/18/2018,3.3,1,55,5
+40111,21113628,403_Room next to Times Square and Central Park,48181316,Vale,Manhattan,Hell's Kitchen,40.76127389,-73.9879347,Private room,50,1,17,1/21/2018,3.21,6,17,5
+40591,21251256,"Room 2B in Guesthouse, Manhattan",7831209,Bobi,Manhattan,East Harlem,40.8068048,-73.93931821,Private room,50,1,14,1/6/2018,2.92,9,61,5
+40992,21369333,Beautiful and sunny EV 1 bedroom,6253735,Carli,Manhattan,East Village,40.72483691,-73.98710031,Entire home/apt,50,2,3,12/4/2017,0.71,1,364,5
+41574,21518548,Earthy and stylish in Alphabet City,1624450,Devika,Manhattan,East Village,40.72755449,-73.97913118,Entire home/apt,50,14,0,,,1,83,5
+41093,21394627,brooklyn prospect park,279067,Manami,Brooklyn,Prospect-Lefferts Gardens,40.65515571,-73.95995935,Private room,50,1,0,,,1,364,4
+30021,16579094,Luggage Depot CLOSE TO JFK/LGA/CitiFIELD/Manhattan,21216008,Jose,Queens,Jackson Heights,40.75024399,-73.87792595,Shared room,50,1,4,1/30/2018,0.94,4,356,3
+33781,18750597,"Huge Brooklyn Brownstone Living, Close to it all.",8993084,Kimberly,Brooklyn,Bedford-Stuyvesant,40.69023321,-73.95428281,Private room,50,2,1,1/6/2018,0.52,4,95,3
+37912,20333471,Hostel Style Room | Ideal Traveling Buddies,131697576,Anisha,Bronx,East Morrisania,40.83296485,-73.88667694,Private room,50,2,9,2/4/2018,1.75,4,159,3
+38008,20395608,??Warm NYC Getaway ??| Walk/Transit Score 85+ |,131697576,Anisha,Bronx,East Morrisania,40.83243079,-73.8860798,Private room,50,2,22,2/3/2018,3.22,4,178,3
+38028,20405662,Bright Private Room,8290783,Christina,Queens,Ridgewood,40.69847036,-73.90009101,Private room,50,1,8,1/12/2018,1.22,2,0,3
+38110,20436836,1 Bedroom in Bushwick,33286735,Courtney,Brooklyn,Bushwick,40.70648544,-73.91899256,Private room,50,1,0,,,1,3,3
+38249,20492482,Home Base!,8518665,Kevin,Brooklyn,Bedford-Stuyvesant,40.69392309,-73.95443321,Private room,50,1,18,1/2/2018,2.81,4,175,3
+38327,20523843,"MARTIAL LOFT 3: REDEMPTION (upstairs, 2nd room)",15787004,Martial Loft,Brooklyn,Bushwick,40.69467152,-73.92433134,Private room,50,2,6,1/20/2018,0.98,4,246,3
+38506,20586622,2 br apt|Brooklyn|2 min subway|for 6 ppl| new,115240057,Denis,Brooklyn,Bushwick,40.7014526,-73.91614458,Entire home/apt,50,3,1,10/15/2017,0.21,4,131,3
+38572,20607108,Convenient Fun Space Walk to Central Park (UES),62795187,Haruki,Manhattan,Upper East Side,40.77308806,-73.95670291,Shared room,50,3,25,2/17/2018,4.63,3,54,3
+38675,20639628,Spacious comfortable master bedroom with nice view,86327101,Adeyemi,Brooklyn,Bedford-Stuyvesant,40.68172663,-73.91341687,Private room,50,1,18,2/18/2018,3.38,6,138,3
+38676,20639792,Contemporary bedroom in brownstone with nice view,86327101,Adeyemi,Brooklyn,Bedford-Stuyvesant,40.68279016,-73.91169719,Private room,50,1,28,3/1/2018,5.25,6,141,3
+38677,20639914,Cozy yet spacious private brownstone bedroom,86327101,Adeyemi,Brooklyn,Bedford-Stuyvesant,40.68258344,-73.91284497,Private room,50,1,19,2/11/2018,3.5,6,152,3
+38948,20728112,Beautiful bedroom w/private garden in Brooklyn,128605205,Tom,Brooklyn,Bedford-Stuyvesant,40.68749172,-73.95178431,Private room,50,2,8,1/1/2018,1.33,1,0,3
+39535,20933849,Midtown East Studio - quiet & close to everything,13709292,Qiuchi,Manhattan,Midtown,40.75532627,-73.96602819,Entire home/apt,50,3,0,,,1,362,3
+40726,21291569,Coliving in Brooklyn! Modern design / Shared room,101970559,Erik,Brooklyn,Bushwick,40.69211104,-73.90670474,Shared room,50,15,1,1/3/2018,0.49,4,357,3
+40773,21304320,Best Coliving space ever! Shared room.,101970559,Erik,Brooklyn,Bushwick,40.69165583,-73.90927571,Shared room,50,15,1,12/16/2017,0.37,4,351,3
+33375,18572271,Private bedroom in 2 bed 2 bath UWS,6726364,Alejandra,Manhattan,Upper West Side,40.80061764,-73.96168689,Private room,50,3,1,8/7/2017,0.14,2,0,2
+37615,20224936,Gorgeous Working Studio with Loft Bedroom,35894876,Kristin,Brooklyn,Greenpoint,40.7250538,-73.94448812,Entire home/apt,50,2,4,10/3/2017,0.61,1,365,2
+37794,20286627,Simple room in Williamsburg II,2307055,Norman,Brooklyn,Williamsburg,40.71590236,-73.93723792,Private room,50,1,3,11/24/2017,0.44,1,184,2
+38529,20591509,Garden Light,127756959,Lawrence & Patrice,Brooklyn,East Flatbush,40.63972162,-73.93234083,Private room,50,3,6,11/16/2017,0.95,2,364,2
+38632,20624541,Modern apartment in the heart of Williamsburg,10132166,Aymeric,Brooklyn,Williamsburg,40.70838179,-73.94645149,Entire home/apt,50,5,3,1/2/2018,0.8,1,72,2
+38823,20686134,Hideaway Studio,14469743,Brian,Bronx,Pelham Bay,40.84710777,-73.83039167,Entire home/apt,50,2,19,2/11/2018,3.54,1,34,2
+38966,20738762,Light field designer apartment,9326099,Adi,Brooklyn,Williamsburg,40.71913496,-73.95440494,Entire home/apt,50,2,2,1/1/2018,0.47,1,72,2
+40177,21138538,Lavish 2 BR minutes from Central Park!,149977050,Igor,Manhattan,Upper West Side,40.78631184,-73.97751858,Entire home/apt,50,2,3,1/1/2018,0.8,1,343,2
+40871,21331808,Surfers Paradise - 170 Frost,536745,Johnny,Brooklyn,Williamsburg,40.71684109,-73.94366328,Private room,50,2,3,1/5/2018,0.67,3,82,2
+38378,20542510,Room 1 Private Lower Level Getaway w/ Window  (Lower Level 1),104927746,Amardeep,Staten Island,Concord,40.59668507,-74.08644931,Private room,50,1,12,2/25/2018,2.31,4,347,1
+38505,20586405,Rockaway beach Private room,51524470,Ola,Queens,Arverne,40.59248596,-73.78846416,Private room,50,1,3,9/28/2017,0.49,6,229,1
+38510,20587378,Enormous Private Bedroom by the beach,51524470,Ola,Queens,Arverne,40.59115588,-73.78910302,Private room,50,1,3,12/2/2017,0.49,6,184,1
+38513,20587645,Quiet and Comfy Room by the Beach,51524470,Ola,Queens,Arverne,40.5910023,-73.79005903,Private room,50,3,2,1/2/2018,0.83,6,180,1
+39585,20954681,"Large bedroom, near subway, 20 min to Manhattan!",73456844,Lilian,Queens,Forest Hills,40.72217042,-73.84422454,Private room,50,3,3,10/20/2017,0.53,1,67,1
+48660,23524241,Charming master suite,81203628,Suzanne,Brooklyn,Sheepshead Bay,40.58933148,-73.95686651,Private room,58,2,0,,,1,27,2
+12062,6799864,NYC apt -FREE - in exchange for dog sitting,35595560,Lisa,Manhattan,Washington Heights,40.85690472,-73.93741468,Entire home/apt,60,2,6,8/19/2016,0.19,1,0,5
+31303,17437106,Couch in Harlem Harvey Refugees only,33511962,Morgan,Manhattan,Harlem,40.81302145,-73.95348654,Shared room,60,1,0,,,1,0,5
+32251,17979764,Jen Apt,84497333,Jennifer,Manhattan,SoHo,40.72236592,-73.99817405,Private room,60,5,2,4/15/2017,0.18,1,0,5
+35449,19415314,Shared funny cozy room one block from Times Square,47336995,Mario,Manhattan,Hell's Kitchen,40.75812163,-73.98934698,Shared room,60,1,2,6/24/2017,0.23,1,0,5
+42035,21633621,Charming Harlem studio,1679545,Ishai,Manhattan,Harlem,40.81272102,-73.95170043,Entire home/apt,60,1,1,1/18/2018,0.65,1,0,5
+44922,22251353,Tompkin's Square Townhouse,162595765,Olivia,Manhattan,East Village,40.72859796,-73.98724639,Private room,60,1,0,,,1,0,5
+34299,18985328,$10 a night!,946656,Paloma,Manhattan,Inwood,40.86724093,-73.91844214,Entire home/apt,60,24,0,,,1,28,4
+37357,20140519,Private master bedroom w. excellent queen bed.,50591874,John,Brooklyn,Prospect-Lefferts Gardens,40.65552451,-73.95702204,Private room,60,1,3,12/15/2017,0.43,2,0,4
+43034,21839514,"Cat Sitter for Charming, Sun-Filled One Bedroom",7499009,Emma,Brooklyn,Park Slope,40.67384194,-73.97271623,Entire home/apt,60,16,2,12/13/2017,0.6,1,13,4
+48106,23329332,Bright Shared Living Room in our Beautiful Home!!,173754495,Michee,Brooklyn,Cypress Hills,40.67833455,-73.89337707,Shared room,60,1,0,,,1,0,4
+32208,17952277,"Newly renovated, fully furnished room in Brooklyn",62685070,Katie,Brooklyn,Bushwick,40.69973768,-73.91934784,Private room,60,5,0,,,1,0,3
+33968,18835820,"Quiet, Cozy UES Studio Near the Subway",52777892,Amy,Manhattan,Upper East Side,40.76843896,-73.95340982,Entire home/apt,60,2,4,12/31/2017,0.43,1,0,3
+37247,20076606,"Cozy, quiet, simple Bed-Stuy brownstone room",19811406,Jamiles,Brooklyn,Bedford-Stuyvesant,40.68239056,-73.91186866,Private room,60,3,10,1/20/2018,1.35,2,0,3
+39699,20983193,The Milky Way - Entire Home,10415735,Angie,Queens,Howard Beach,40.6604182,-73.85718709,Entire home/apt,60,2,8,1/30/2018,1.85,2,360,3
+47430,23068430,Just this side of Manhattan,40188920,Robin,Queens,Maspeth,40.72068951,-73.9073546,Private room,60,1,0,,,1,28,3
+33223,18490141,IT'S SIMPLY CONVENIENT!,97001292,Maria,Queens,Jamaica,40.69085057,-73.79915844,Entire home/apt,60,3,15,1/16/2018,1.62,1,365,2
+38040,20409141,Gorgeous upscale 2bdrm apt w/ HUGE private terrace,18209809,Ashley,Brooklyn,Greenpoint,40.73223935,-73.95274473,Entire home/apt,60,2,6,2/1/2018,1.1,1,339,2
+43180,21869057,Spacious 2-bedroom Apt in Heart of Greenpoint,11967922,Vishanti,Brooklyn,Greenpoint,40.7242112,-73.95363564,Entire home/apt,60,1,12,2/25/2018,3.64,1,39,2
+44674,22205900,Litle Heaven (10 min from LGA Airport),161649169,Ketty,Queens,Flushing,40.76644816,-73.82784852,Entire home/apt,60,1,1,12/13/2017,0.37,1,88,2
+30093,16620607,Spacious and Modern 2 Bedroom Apartment,109725962,Erika,Brooklyn,Bushwick,40.68994256,-73.91555697,Entire home/apt,61,2,53,2/18/2018,4.1,1,264,3
+36471,19808820,420! Place to crash for the night.,128907090,Jam,Brooklyn,Bensonhurst,40.60847321,-73.99682093,Shared room,61,1,0,,,1,0,2
+30570,16927533,Studio with amazing view,3737986,Carolann,Manhattan,Financial District,40.70588318,-74.01590231,Entire home/apt,62,300,0,,,1,0,5
+43698,21981703,Beautiful and Charming 2 Bedroom in Brooklyn!,2066240,Marcella,Brooklyn,Crown Heights,40.67404639,-73.94419172,Entire home/apt,62,3,0,,,1,0,3
+48425,23446541,Section A,174912209,Evan,Manhattan,East Harlem,40.79570351,-73.94801934,Shared room,63,1,0,,,1,365,5
+25962,14605505,"Cozy, welcoming room  in Manhattan",33897850,Fatou,Manhattan,East Harlem,40.7944854,-73.94052738,Private room,65,3,1,7/21/2017,0.13,1,0,5
+32315,18007671,Cute 1 bedroom basement apartment,73228035,Maimi,Brooklyn,East Flatbush,40.66199595,-73.93775083,Private room,65,1,2,4/17/2017,0.18,1,0,4
+44937,22258432,Awesome designed shared room in beautiful Coliving,146345538,Outpost Club,Brooklyn,Bushwick,40.69328717,-73.91327963,Shared room,65,14,2,2/16/2018,1.05,1,346,3
+45322,22337792,Friend's home,163320323,Lee,Queens,Flushing,40.72914358,-73.80944222,Private room,65,1,0,,,1,89,3
+42934,21823862,Unisex room of bunks prime chinatown Queens (b1),156076261,Mon,Queens,Flushing,40.76606466,-73.82809298,Shared room,65,10,1,2/19/2018,1,6,168,2
+43247,21884781,3ACCESS 2 NYC/Apt in heart of Queens/Comfort&Quiet,13574223,Jimmy,Queens,East Elmhurst,40.76282543,-73.88794221,Shared room,65,1,6,1/10/2018,2.05,14,62,2
+43617,21966099,1ACCESS 2 NYC/Apt in heart of Queens/Comfort&Quiet,13574223,Jimmy,Queens,East Elmhurst,40.76378181,-73.88641459,Shared room,65,1,5,1/22/2018,1.79,14,56,2
+43618,21966278,2ACCESS 2 NYC/Apt in heart of Queens/Comfort&Quiet,13574223,Jimmy,Queens,East Elmhurst,40.76200272,-73.88612581,Shared room,65,1,12,2/16/2018,4,14,53,2
+43624,21966434,4ACCESS 2 NYC/Apt in heart of Queens/Comfort&Quiet,13574223,Jimmy,Queens,East Elmhurst,40.7621083,-73.88649312,Shared room,65,1,3,2/1/2018,1.13,14,57,2
+43628,21966651,5ACCESS 2 NYC/Apt in heart of Queens/Comfort&Quiet,13574223,Jimmy,Queens,East Elmhurst,40.76398209,-73.88805806,Shared room,65,1,5,2/14/2018,1.74,14,70,2
+43629,21966747,6ACCESS 2 NYC/Apt in heart of Queens/Comfort&Quiet,13574223,Jimmy,Queens,East Elmhurst,40.76360447,-73.88632958,Shared room,65,1,4,1/31/2018,1.41,14,64,2
+43917,22029448,7ACCESS 2 NYC/Apt in heart of Queens/Comfort&Quiet,13574223,Jimmy,Queens,East Elmhurst,40.76251696,-73.88733037,Shared room,65,1,9,2/19/2018,3.03,14,41,2
+44187,22088418,8ACCESS 2 NYC/Apt in heart of Queens/Comfort&Quiet,13574223,Jimmy,Queens,East Elmhurst,40.76293418,-73.8878011,Shared room,65,1,12,2/27/2018,4.62,14,62,2
+44277,22109232,9ACCESS 2 NYC/Apt in heart of Queens/Comfort&Quiet,13574223,Jimmy,Queens,East Elmhurst,40.76346317,-73.88594773,Shared room,65,1,10,2/28/2018,3.61,14,59,2
+44332,22124992,10ACCESS 2 NYC/Apt @ heart of Queens/Comfort&Quiet,13574223,Jimmy,Queens,East Elmhurst,40.76435423,-73.88761543,Shared room,65,1,5,1/10/2018,1.9,14,2,2
+44338,22125437,11ACCESS 2 NYC/Apt @ heart of Queens/Comfort&Quiet,13574223,Jimmy,Queens,East Elmhurst,40.76227935,-73.88725872,Shared room,65,1,2,1/1/2018,0.79,14,23,2
+44349,22129906,12ACCESS 2 NYC/Apt @ heart of Queens/Comfort&Quiet,13574223,Jimmy,Queens,East Elmhurst,40.76385581,-73.88749685,Shared room,65,1,4,2/4/2018,2.07,14,57,2
+45150,22303525,13ACCESS 2 NYC/Apt @ heart of Queens/Comfort&Quiet,13574223,Jimmy,Queens,East Elmhurst,40.76403742,-73.88784921,Shared room,65,1,2,12/21/2017,0.78,14,0,2
+46592,22730630,"Meticulous Baggage Drop Off Near JFK, LGA and NYC",72838963,Deborah,Queens,Jamaica,40.68532008,-73.79780542,Shared room,65,1,1,2/18/2018,1,4,365,2
+47946,23273896,C. Private room with lock and key near the train,169585499,Alex,Brooklyn,Gravesend,40.59953207,-73.98418657,Private room,65,1,0,,,7,0,2
+5971,3067093,Stylish East Village Studio near Union Sq,3541594,Jennifer,Manhattan,East Village,40.73057329,-73.99034318,Entire home/apt,66,1,0,,,1,0,5
+7421,4031809,Prewar classic NYC apartment.,20902552,Miquel,Manhattan,Washington Heights,40.83456279,-73.94344481,Private room,66,14,0,,,1,0,5
+10540,5870565,Heartt of Greenwich Village,30475583,Annmarie,Manhattan,West Village,40.72877693,-74.00270294,Private room,66,7,1,2/13/2018,1,1,302,5
+11125,6301965,Beautiful SoHo Loft,655506,Silvia,Manhattan,SoHo,40.72339843,-73.99966662,Entire home/apt,66,3,3,1/8/2018,1.08,1,0,5
+11252,6364324,The Oasis.,33106693,Elena,Manhattan,Harlem,40.82159455,-73.95012818,Private room,66,2,15,12/9/2017,1.56,3,129,5
+11220,6353022,COZY SPACE,33025401,Wafa,Brooklyn,South Slope,40.66309575,-73.98709358,Private room,67,5,0,,,1,165,4
+39268,20831738,Clean bed for small budget,147955528,Jackie,Bronx,Clason Point,40.80989528,-73.85444374,Shared room,67,1,28,2/12/2018,4.75,3,47,4
+44986,22266078,Bed in shared hostel room,60800878,Jasmine,Bronx,Clason Point,40.80873384,-73.85302814,Shared room,67,1,3,2/4/2018,1.29,2,140,4
+22580,13116327,"Loft to share, Bay ridge.",72955456,Vishnu,Brooklyn,Bay Ridge,40.63633649,-74.02667817,Shared room,67,14,1,6/21/2016,0.05,1,0,3
+43106,21852732,"CozyRoom in Chinese area, 40/30 mins to NYU/Tandon",47227131,Xiao,Brooklyn,Bensonhurst,40.62048109,-74.00088304,Private room,67,5,3,1/1/2018,1.29,1,0,2
+14311,8006119,A place to lay ur head,33858504,Leo,Staten Island,New Dorp Beach,40.56507701,-74.10093396,Private room,67,1,42,12/28/2017,1.38,1,364,1
+39946,21055790,Budget friendly spot. Couch for explorer.,144346563,Elzie,Brooklyn,Brownsville,40.65949165,-73.91145913,Shared room,68,3,6,1/2/2018,1.16,2,90,4
+5280,2459916,"$455 Cozy 1bd, BKLYN Sublet March",12577771,Victor,Brooklyn,Bedford-Stuyvesant,40.68948266,-73.93527584,Private room,68,1,0,,,1,0,3

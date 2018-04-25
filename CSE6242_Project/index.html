@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<title>AirBnB Safety Map</title>
+
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous">
+</script>
+
+<style>
+	/* Always set the map height explicitly to define the size of the div
+	* element that contains the map. */
+	html, body, #map {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		left: 10px;
+		margin-top: 15px;
+	}
+
+	.layer, .layer svg {position: absolute;}
+
+	.layer svg {
+		width: 60px;
+		height: 60px;
+		padding-right: 100px;
+		font: 10px sans-serif;
+	}
+
+	#price_range {
+		width: 99%;
+		top: 5px;
+		margin: 1px;
+	}
+
+	#price_box {
+		left: 40%;
+		padding: 5px;
+		position: absolute;
+		top: 30px;
+		z-index: 5;
+		text-align: left;
+		font-family: 'Ubuntu';
+		font-weight: 800;
+		padding-left: 10px;
+		line-height: 3px;
+		color: white;
+		background-color: #F1948A;
+		width: 23.5%;
+	}
+
+	#heatmap_show {
+		left: 80%;
+		padding: 5px;
+		position: absolute;
+		top: 570px;
+		z-index: 5;
+		text-align: left;
+		font-family: 'Ubuntu';
+		font-weight: 800;
+		line-height: 5px;
+		padding-left: 10px;
+		color: white;
+		background-color: #F1948A;
+	}
+
+	#heatmap_setting {
+		left: 65%;
+		padding: 5px;
+		position: absolute;
+		top: 30px;
+		z-index: 5;
+		text-align: left;
+		font-family: 'Ubuntu';
+		font-weight: 800;
+		line-height: 5px;
+		padding-left: 10px;
+		color: white;
+		background-color: #F1948A;
+	}
+
+	.tooltip {	
+		position: absolute;
+		//text-align: center;
+		border-radius: 15px;
+		-moz-border-radius: 15px;
+		padding: 20px;
+		background: #fff;
+		border: 0px;
+		pointer-events: none;
+		font-family: 'Ubuntu';
+		left: 5px;
+	}
+
+	.rotate30 {
+		-webkit-transform: rotate(-30deg);
+		-moz-transform: rotate(-30deg);
+		-o-transform: rotate(-30deg);
+		-ms-transform: rotate(-30deg);
+		transform: rotate(-30deg);
+	}
+
+</style>
+</head>
+
+<body style="margin-left:20px; background-color:#e0e0e0;">
+
+	<div class="col-md-6 col-md-offset-3">
+		<h5><img style="width:75px; height:22px" class="rotate30" src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2000px-Airbnb_Logo_B%C3%A9lo.svg.png
+			' alt="AirBnB Logo"><b>New York City - AirBnB Safety Map</b></h5>
+			<p> This is a demo webpage for booking an AirBnB in New York City<br/> created for Georgia Tech CSE-6242 Project.<br/></p>
+			<div id="price_box">
+				<form action="#">
+					<p>Price Range (Max Price / night) : $ <b><span id="price_display">50</span></b></p>
+					<p class="range-field">
+						<input type="range"
+						id="price_range"
+						min="0"
+						max="100"
+						oninput="update_dataset(this.value);"
+						onchange="update_dataset(this.value);"/>
+					</p>
+				</form>
+			</div>
+
+			<div id="heatmap_show">
+				<p>Crime Heatmaps (PNG)</p>
+				<input type="button" value="Felony" onclick="window.open('https://raw.githubusercontent.com/ckwan48/CSE6242_Project/master/crime_heatmap_bylevel/whitecolor_sightstovisit_added/Felony.PNG','_blank')">
+				<input type="button" value="Misdemeanor" onclick="window.open('https://raw.githubusercontent.com/ckwan48/CSE6242_Project/master/crime_heatmap_bylevel/whitecolor_sightstovisit_added/Misdemeanor.PNG','_blank')">
+				<input type="button" value="Violation" onclick="window.open('https://raw.githubusercontent.com/ckwan48/CSE6242_Project/master/crime_heatmap_bylevel/whitecolor_sightstovisit_added/Violation.PNG','_blank')">
+
+			</div>
+
+			<div id="heatmap_setting">
+				<p>Settings</p>
+				<button onclick="toggleHeatmap()">Heatmap</button>
+				<button onclick="changeGradient()">Gradient</button>
+				<button onclick="changeRadius2()">Radius: 2</button>
+				<button onclick="changeRadius3()">Radius: 3</button>
+				<button onclick="changeRadius4()">Radius: 4</button>
+				<button onclick="changeOpacity()">Opacity</button>
+			</div>
+
+			<div id="map" style="width:1400px;height:550px"></div>
+			<script type="text/javascript">
+
+				/*global $*/
+				/*global d3*/
+				/*global google*/
+
+				var map;
+				var bound;
+				var heatmapData = [];
+				var heatmap;
+				const HOUSE_ICON_SIZE = 25;
+				var MAX_PRICE_IN_DATA;
+				var MIN_PRICE_IN_DATA;
+
+				var stored_data;
+				var dataset;
+				var margin = {top: 20, right: 10, bottom: 20, left: 10};
+				var width = 800 - margin.left - margin.right;
+				var height = 600 - margin.top - margin.bottom;
+				var overlay;
+				var no_of_drawings;
+
+	// toggle functions
+	function toggleHeatmap() {
+		heatmap.setMap(heatmap.getMap() ? null : map);
+	}
+	
+
+	function changeGradient() {
+		var gradient = [
+		'rgba(0, 255, 255, 0)',
+		'rgba(0, 255, 255, 1)',
+		'rgba(0, 191, 255, 1)',
+		'rgba(0, 127, 255, 1)',
+		'rgba(0, 63, 255, 1)',
+		'rgba(0, 0, 255, 1)',
+		'rgba(0, 0, 223, 1)',
+		'rgba(0, 0, 191, 1)',
+		'rgba(0, 0, 159, 1)',
+		'rgba(0, 0, 127, 1)',
+		'rgba(63, 0, 91, 1)',
+		'rgba(127, 0, 63, 1)',
+		'rgba(191, 0, 31, 1)',
+		'rgba(255, 0, 0, 1)'
+		]
+		heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
+	}
+
+	function changeRadius2() {
+		heatmap.set('radius', heatmap.get('radius') ? null : 20);
+	}
+
+	function changeRadius3() {
+		heatmap.set('radius', heatmap.get('radius') ? null : 30);
+	}
+
+	function changeRadius4() {
+		heatmap.set('radius', heatmap.get('radius') ? null : 40);
+	}
+
+	function changeOpacity() {
+		heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
+	}
+
+	function update_dataset(rat){
+		$("#price_display").text(rat);
+
+		dataset = []
+		for(var i = 0; i<stored_data.length;i++){
+			if(stored_data[i].price <= rat)
+				dataset.push(stored_data[i]);
+		}
+		overlay.draw();
+	};
+
+	function eqfeed_callback() {
+		d3.csv("https://raw.githubusercontent.com/ckwan48/CSE6242_Project/master/crime_data/crime_demo_10_000.csv",function(dataset){
+
+			heatmapData = [];
+
+			for (var i = 0; i < dataset.length; i++) {
+				var lat =  +parseFloat(dataset[i]["Latitude"]);
+				var long =  +parseFloat(dataset[i]["Longitude"]);
+				var latLng = new google.maps.LatLng(lat, long);
+				heatmapData.push(latLng);
+			}
+
+			heatmap = new google.maps.visualization.HeatmapLayer({
+				data: heatmapData,
+				map: map
+			});
+		})
+	}
+
+	function shuffle(array) {
+		var currentIndex = array.length, temporaryValue, randomIndex;
+
+		// While there remain elements to shuffle...
+		while (0 !== currentIndex) {
+
+			// Pick a remaining element...
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex -= 1;
+
+			// And swap it with the current element.
+			temporaryValue = array[currentIndex];
+			array[currentIndex] = array[randomIndex];
+			array[randomIndex] = temporaryValue;
+		}
+
+		return array;
+	}	
+
+	$( document ).ready(function() {
+		console.log( "ready!" );
+
+
+		d3.csv("https://raw.githubusercontent.com/ckwan48/CSE6242_Project/master/airbnb_data/airbnb_plus_safety_clean.csv", function(_dataset) {
+			dataset = _dataset;
+			
+			bound = new google.maps.LatLngBounds();
+			dataset = shuffle(dataset);
+			for(var data in dataset){
+				dataset[data].latitude =  +parseFloat(dataset[data].latitude);
+				dataset[data].longitude =  +parseFloat(dataset[data].longitude);
+				dataset[data].price =  +parseFloat(dataset[data].price);
+				dataset[data].id =  +parseInt(dataset[data].id);
+
+				var long = +dataset[data].longitude;
+				var lat = +dataset[data].latitude;
+				// console.log(long + " " + lat);
+
+				bound.extend(new google.maps.LatLng(lat,long));
+			}
+
+			function compare(a,b){
+				if(a.price < b.price)
+					return -1;
+				return 1;
+			}
+
+			dataset.sort(compare);
+			dataset = dataset.slice(dataset.length*0.1,dataset.length*0.9);
+
+			// console.log(dataset)
+			
+			MAX_PRICE_IN_DATA = d3.max(dataset,d => d.price);
+			MIN_PRICE_IN_DATA = d3.min(dataset,d => d.price);
+
+			$("#price_range").attr("max",MAX_PRICE_IN_DATA);
+			$("#price_range").attr("min",MIN_PRICE_IN_DATA);
+
+			stored_data = shuffle(dataset);
+
+			
+			d3.selectAll('#map').attr('width', width - 200);
+
+			map = new google.maps.Map(d3.select("#map").node(),{
+				zoom: 11,
+				center: new google.maps.LatLng(dataset[0].latitude, dataset[0].longitude),
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			});
+			
+			map.fitBounds(bound);
+
+
+			// Create a <script> tag and set the USGS URL as the source.
+			var script = document.createElement('script');
+
+			eqfeed_callback()
+
+			overlay = new google.maps.OverlayView();
+			overlay.onAdd = function(){
+				var layer = d3.select(this.getPanes().overlayMouseTarget).append("div")
+				.attr("class","layer");
+
+				overlay.draw = function(){
+					var projection = this.getProjection();
+					var padding = 10;
+
+					no_of_drawings = parseInt((map.getZoom()/8.0)**11);
+					// console.log(no_of_drawings);
+					var data_in_range = []
+					// shuffled_dataset = shuffle(dataset)
+					if(no_of_drawings > dataset.length*0.9)
+						no_of_drawings = dataset.length;
+					var data_to_draw = dataset.slice(0, no_of_drawings);
+
+
+					// layer.selectAll("svg").remove();
+					// d3.selectAll(".tooltip").remove();
+					var div = d3.select("body").append("div")	
+					.attr("class", "tooltip")				
+					.style("opacity", 0);
+
+
+					var marker = layer.selectAll("svg")
+					.data(data_to_draw , function(d) { return d.id });
+
+					marker.each(transform) ;//update existing markers
+
+					var safety_stars = "";
+					
+
+					var new_svgs = marker.enter().append("svg")
+					.on("mouseover", function(d) {
+						div.transition()		
+						.duration(200)		
+						.style("opacity", .9);
+
+						var full_stars = "";
+						for(var i=0;i<d.Safety;i++)
+							full_stars += "<i class='material-icons'>star</i>";
+
+						var empty_stars = "";
+						for(var i=0;i<5 - d.Safety;i++)
+							empty_stars += "<i class='material-icons'>star_border</i>";
+
+						div.html("<b>Name</b><br/>" + d.name + "<br/><br/>"
+							+ "<b>Host</b><br/>" + d.host_name + "<br/><br/>"
+							+ "<b>Price</b><br/>$" + d.price + " per night<br/><br/>"
+							+ "<b>Safety Level</b><br/>" + full_stars + empty_stars)	
+						.style("left", (d3.event.pageX) + "px")
+						.style("top", (d3.event.pageY - 28) + "px")
+						.style("background", "white");
+					})
+
+					.on("mouseout", function(d) {		
+						div.transition()		
+						.duration(100)		
+						.style("opacity", 0);	
+					})
+					.each(transform)
+					.attr("class","marker");
+
+					
+					new_svgs.append("image")
+					.attr("xlink:href","https://image.flaticon.com/icons/svg/608/608671.svg")
+					.attr("width", HOUSE_ICON_SIZE)
+					.attr("height", HOUSE_ICON_SIZE)
+
+					marker.exit()
+					.remove();
+					
+
+					function transform(d){
+						d = new google.maps.LatLng(+d.latitude,+d.longitude);
+						d = projection.fromLatLngToDivPixel(d);
+						return d3.select(this)
+						.style("left",(d.x - padding) + "px")
+						.style("top",(d.y - padding) + "px" );
+					}
+				};
+			}
+			overlay.setMap(map);
+		});
+});
+</script>
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/swifticons" title="Swifticons">Swifticons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDvdyxZpXuv02KqZIdErEBon5C7_Z8F2g&libraries=visualization"
+async defer></script>
+<!-- <script src="//cdn.bootcss.com/noUiSlider/8.5.1/nouislider.js"></script> -->
+
+</div>
+
+</body>
+</html>
