@@ -1,11 +1,11 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-- name: NYC Crime
+- name: Crime + AirBnB
   i18n: Crash
   gh_user: ckwan48
   repo: CSE6242_Project
-  img: /static/assets/img/landing/crash.png
+  img: /static/assets/img/landing/airbnblogo.png
   desc: Crime data-driven AirBnB house suggestion
 
 - name: Moody
