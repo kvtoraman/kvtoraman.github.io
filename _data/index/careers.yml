@@ -12,7 +12,7 @@
   job:
     detail: Software Engineering Internship
     i18n: company_a_job
-  icon: fa-plus-square
+  icon: fa-yahoo
 
 - name:
     detail: Exchange at Georgia Tech
